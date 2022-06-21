@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "GP2cLKiRDUjpqfTmnG8CrWqdltx6zQMaBI0siaDy8qCZF7x+4C5/Sg9HdGPrwT96sGYwSuD7OjeI245ByzZyhA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity\\PS.Identity.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\maiara.santos\\.nuget\\packages\\fluentvalidation\\11.0.3\\fluentvalidation.11.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

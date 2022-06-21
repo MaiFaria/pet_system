@@ -1,0 +1,52 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "PS.Identity/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "11.0.3",
+          "PS.Core": "1.0.0"
+        },
+        "runtime": {
+          "PS.Identity.dll": {}
+        }
+      },
+      "FluentValidation/11.0.3": {
+        "runtime": {
+          "lib/net6.0/FluentValidation.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.3.0"
+          }
+        }
+      },
+      "PS.Core/1.0.0": {
+        "runtime": {
+          "PS.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PS.Identity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FluentValidation/11.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UZSn74ufuSpHBSRivPVe1IGhOYnbyzr1jpoWqK3CTcnpDxkADcwoUbrbKhEio3MZLxTv9yVlFT7uDkb/XotOiQ==",
+      "path": "fluentvalidation/11.0.3",
+      "hashPath": "fluentvalidation.11.0.3.nupkg.sha512"
+    },
+    "PS.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
