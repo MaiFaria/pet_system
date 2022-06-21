@@ -1,0 +1,11 @@
+C:\Users\maiara.santos\pet_system\src\Building Blocks\Core\PS.Core\bin\Debug\PS.Core.dll
+C:\Users\maiara.santos\pet_system\src\Building Blocks\Core\PS.Core\bin\Debug\PS.Core.pdb
+C:\Users\maiara.santos\pet_system\src\Building Blocks\Core\PS.Core\obj\Debug\PS.Core.csproj.AssemblyReference.cache
+C:\Users\maiara.santos\pet_system\src\Building Blocks\Core\PS.Core\obj\Debug\PS.Core.csproj.CoreCompileInputs.cache
+C:\Users\maiara.santos\pet_system\src\Building Blocks\Core\PS.Core\obj\Debug\PS.Core.dll
+C:\Users\maiara.santos\pet_system\src\Building Blocks\Core\PS.Core\obj\Debug\PS.Core.pdb
+C:\Users\maiara.santos\pet_system\src\Building Blocks\Core\PS.Core\bin\Debug\FluentValidation.dll
+C:\Users\maiara.santos\pet_system\src\Building Blocks\Core\PS.Core\bin\Debug\FluentValidation.xml
+C:\Users\maiara.santos\pet_system\src\Building Blocks\Core\PS.Core\obj\Debug\PS.Core.csproj.CopyComplete
+C:\Users\maiara.santos\pet_system\src\Building Blocks\Core\PS.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Users\maiara.santos\pet_system\src\Building Blocks\Core\PS.Core\bin\Debug\Newtonsoft.Json.xml

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "PS.Identity/1.0.0": {
+        "dependencies": {
+          "PS.Core": "1.0.0"
+        },
+        "runtime": {
+          "PS.Identity.dll": {}
+        }
+      },
+      "PS.Core/1.0.0": {
+        "runtime": {
+          "PS.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PS.Identity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PS.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
