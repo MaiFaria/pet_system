@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PS.Identity", "..\src\Servi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PS.Core", "..\src\Building Blocks\Core\PS.Core\PS.Core.csproj", "{16A603C3-D663-4651-9696-FAFCC380FDB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PS.Tests", "..\src\Tests\PS.Test\PS.Tests.csproj", "{0A4445BF-F9BF-485C-8F96-AE899096DD44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PS.Tests", "..\src\Tests\PS.Test\PS.Tests.csproj", "{0A4445BF-F9BF-485C-8F96-AE899096DD44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
