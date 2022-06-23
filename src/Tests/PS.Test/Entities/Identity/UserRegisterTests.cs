@@ -18,7 +18,7 @@ namespace PS.Tests.Entities.Identity
 
         #region 01 - Nome
         [Fact(DisplayName = "#01 - Não Deve criar sem um Nome")]
-        public void MustCreateName()
+        public void MustNotCreateName()
         {
             var builder = _builder.New();
             builder.Name = null;
@@ -27,11 +27,22 @@ namespace PS.Tests.Entities.Identity
 
             Assert.False(model.IsValid, string.Join(Environment.NewLine, model.ValidationResult.Errors), _output, model);
         }
+
+        [Fact(DisplayName = "#01.1 - Deve criar com nome válido")]
+        public void MustCreateName()
+        {
+            var builder = _builder.New();
+            builder.Name = _builder.Name;
+            var model = _builder.Build();
+            model.ValidateForPersistence().Wait();
+
+            Assert.True(model.IsValid, string.Join(Environment.NewLine, model.ValidationResult.Errors), _output, model);
+        }
         #endregion
 
         #region 02 - CPF
         [Fact(DisplayName = "#02 - Não Deve criar sem um CPF")]
-        public void MustCreateCPF()
+        public void MustNotCreateCPF()
         {
             var builder = _builder.New();
             builder.Cpf = null;
@@ -40,11 +51,22 @@ namespace PS.Tests.Entities.Identity
 
             Assert.False(model.IsValid, string.Join(Environment.NewLine, model.ValidationResult.Errors), _output, model);
         }
+
+        [Fact(DisplayName = "#02.1 - Deve criar um CPF válido")]
+        public void MustCreateCPF()
+        {
+            var builder = _builder.New();
+            builder.Cpf = _builder.Cpf;
+            var model = _builder.Build();
+            model.ValidateForPersistence().Wait();
+
+            Assert.True(model.IsValid, string.Join(Environment.NewLine, model.ValidationResult.Errors), _output, model);
+        }
         #endregion
 
         #region 03 - E-mail
         [Fact(DisplayName = "#03 - Não Deve criar sem um E-mail")]
-        public void MustCreateEmail()
+        public void MustNotCreateEmail()
         {
             var builder = _builder.New();
             builder.Email = null;
@@ -53,11 +75,22 @@ namespace PS.Tests.Entities.Identity
 
             Assert.False(model.IsValid, string.Join(Environment.NewLine, model.ValidationResult.Errors), _output, model);
         }
+
+        [Fact(DisplayName = "#03.1 -  Deve criar um E-mail válido")]
+        public void MustCreateEmail()
+        {
+            var builder = _builder.New();
+            builder.Email = _builder.Email;
+            var model = _builder.Build();
+            model.ValidateForPersistence().Wait();
+
+            Assert.True(model.IsValid, string.Join(Environment.NewLine, model.ValidationResult.Errors), _output, model);
+        }
         #endregion
 
         #region 04 - Password
         [Fact(DisplayName = "#04 - Não Deve criar sem um Password com tamanho menor que o 6 dígitos")]
-        public void MustCreateShorterPassword()
+        public void MustNotCreateShorterPassword()
         {
             var builder = _builder.New();
             builder.Password = "cinco";
@@ -67,8 +100,19 @@ namespace PS.Tests.Entities.Identity
             Assert.False(model.IsValid, string.Join(Environment.NewLine, model.ValidationResult.Errors), _output, model);
         }
 
-        [Fact(DisplayName = "#04.01 - Não Deve criar um Password com senhas diferentes")]
-        public void MustCreateDifferentPassword()
+        [Fact(DisplayName = "#04.1 - Deve criar um Password válido")]
+        public void MustCreateShorterPassword()
+        {
+            var builder = _builder.New();
+            builder.Password = _builder.Password;
+            var model = _builder.Build();
+            model.ValidateForPersistence().Wait();
+
+            Assert.True(model.IsValid, string.Join(Environment.NewLine, model.ValidationResult.Errors), _output, model);
+        }
+
+        [Fact(DisplayName = "#04.2 - Não Deve criar um Password Confirmation com senhas diferentes")]
+        public void MustNotCreateDifferentPassword()
         {
             var builder = _builder.New();
             builder.PasswordConfirmation = "diferente";
@@ -76,6 +120,17 @@ namespace PS.Tests.Entities.Identity
             model.ValidateForPersistence().Wait();
 
             Assert.False(model.IsValid, string.Join(Environment.NewLine, model.ValidationResult.Errors), _output, model);
+        }
+
+        [Fact(DisplayName = "#04.3 - Deve criar um Password Confirmation válido")]
+        public void MustCreateDifferentPassword()
+        {
+            var builder = _builder.New();
+            builder.PasswordConfirmation = _builder.PasswordConfirmation;
+            var model = _builder.Build();
+            model.ValidateForPersistence().Wait();
+
+            Assert.True(model.IsValid, string.Join(Environment.NewLine, model.ValidationResult.Errors), _output, model);
         }
         #endregion
     }
