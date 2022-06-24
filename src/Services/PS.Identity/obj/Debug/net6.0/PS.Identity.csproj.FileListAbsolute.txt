@@ -67,7 +67,6 @@ C:\Users\maiara.santos\pet_system\src\Services\PS.Identity\bin\Debug\net6.0\runt
 C:\Users\maiara.santos\pet_system\src\Services\PS.Identity\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\maiara.santos\pet_system\src\Services\PS.Identity\bin\Debug\net6.0\PS.Core.dll
 C:\Users\maiara.santos\pet_system\src\Services\PS.Identity\bin\Debug\net6.0\PS.Core.pdb
-C:\Users\maiara.santos\pet_system\src\Services\PS.Identity\bin\Debug\net6.0\PS.Core.dll.config
 C:\Users\maiara.santos\pet_system\src\Services\PS.Identity\obj\Debug\net6.0\PS.Identity.csproj.AssemblyReference.cache
 C:\Users\maiara.santos\pet_system\src\Services\PS.Identity\obj\Debug\net6.0\PS.Identity.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\maiara.santos\pet_system\src\Services\PS.Identity\obj\Debug\net6.0\PS.Identity.AssemblyInfoInputs.cache

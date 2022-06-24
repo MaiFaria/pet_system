@@ -1,4 +1,4 @@
-﻿using PS.Core.Validations;
+﻿using PS.Core.Validation;
 using PS.Identity.Validations;
 using System.ComponentModel.DataAnnotations;
 

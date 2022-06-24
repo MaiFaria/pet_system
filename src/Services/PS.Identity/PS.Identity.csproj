@@ -6,6 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..\..\Pet.System</DockerfileContext>
+    <UserSecretsId>22954c7b-a9cf-48ad-84b1-c6309af0886e</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,7 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Building Blocks\Core\PS.Core\PS.Core.csproj" />
 	<PackageReference Include="FluentValidation" Version="11.0.3" />
 	<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.6" />
 	<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.6" />
@@ -34,7 +34,11 @@
 	<PackageReference Include="NetDevPack.Security.Jwt.Core" Version="6.0.6" />
 	<PackageReference Include="NetDevPack.Security.Jwt.Store.EntityFrameworkCore" Version="6.0.6" />
 	<PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
-	<PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="6.2.3" />
+	<PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="6.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Building Blocks\PS.Core\PS.Core.csproj" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
