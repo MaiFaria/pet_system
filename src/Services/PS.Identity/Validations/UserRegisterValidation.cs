@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 using static PS.Identity.Models.UserViewModels;
-using static PS.Core.Helpers.ResourceString;
+using static PS.Core.Helper.ResourceString;
 
 namespace PS.Identity.Validations
 {

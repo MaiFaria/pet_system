@@ -817,11 +817,11 @@
           "build/Swashbuckle.AspNetCore.props": {}
         }
       },
-      "Swashbuckle.AspNetCore.Newtonsoft/6.2.3": {
+      "Swashbuckle.AspNetCore.Newtonsoft/6.3.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "6.0.0-rc.1.21452.15",
-          "Swashbuckle.AspNetCore.SwaggerGen": "6.2.3"
+          "Swashbuckle.AspNetCore.SwaggerGen": "6.3.1"
         },
         "compile": {
           "lib/net6.0/Swashbuckle.AspNetCore.Newtonsoft.dll": {}
@@ -2648,10 +2648,10 @@
         "swashbuckle.aspnetcore.nuspec"
       ]
     },
-    "Swashbuckle.AspNetCore.Newtonsoft/6.2.3": {
-      "sha512": "O1i7j5obeREGs2XInJ33zqh+lmsgaR2SCuKCjwkNiAEm7GcUqgSXdSVLt2GW07h4kSKSCyca/gJFEAdKYYn1UQ==",
+    "Swashbuckle.AspNetCore.Newtonsoft/6.3.1": {
+      "sha512": "oy6BwAX+tcKO13n9bw3nPtITBvD03bAHDN2+lTaOY/cUNcQE/liu3xWjbkdhLeNTUiC+7h+lJvR7KUdI7CXz0w==",
       "type": "package",
-      "path": "swashbuckle.aspnetcore.newtonsoft/6.2.3",
+      "path": "swashbuckle.aspnetcore.newtonsoft/6.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2663,7 +2663,7 @@
         "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Newtonsoft.pdb",
         "lib/netstandard2.0/Swashbuckle.AspNetCore.Newtonsoft.dll",
         "lib/netstandard2.0/Swashbuckle.AspNetCore.Newtonsoft.pdb",
-        "swashbuckle.aspnetcore.newtonsoft.6.2.3.nupkg.sha512",
+        "swashbuckle.aspnetcore.newtonsoft.6.3.1.nupkg.sha512",
         "swashbuckle.aspnetcore.newtonsoft.nuspec"
       ]
     },
@@ -3402,8 +3402,8 @@
     },
     "PS.Core/1.0.0": {
       "type": "project",
-      "path": "../../Building Blocks/Core/PS.Core/PS.Core.csproj",
-      "msbuildProject": "../../Building Blocks/Core/PS.Core/PS.Core.csproj"
+      "path": "../../Building Blocks/PS.Core/PS.Core.csproj",
+      "msbuildProject": "../../Building Blocks/PS.Core/PS.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3426,7 +3426,7 @@
       "NetDevPack.Security.Jwt.Store.EntityFrameworkCore >= 6.0.6",
       "PS.Core >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.3.1",
-      "Swashbuckle.AspNetCore.Newtonsoft >= 6.2.3"
+      "Swashbuckle.AspNetCore.Newtonsoft >= 6.3.1"
     ]
   },
   "packageFolders": {
@@ -3461,8 +3461,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\maiara.santos\\pet_system\\src\\Building Blocks\\Core\\PS.Core\\PS.Core.csproj": {
-              "projectPath": "C:\\Users\\maiara.santos\\pet_system\\src\\Building Blocks\\Core\\PS.Core\\PS.Core.csproj"
+            "C:\\Users\\maiara.santos\\pet_system\\src\\Building Blocks\\PS.Core\\PS.Core.csproj": {
+              "projectPath": "C:\\Users\\maiara.santos\\pet_system\\src\\Building Blocks\\PS.Core\\PS.Core.csproj"
             }
           }
         }
@@ -3549,7 +3549,7 @@
           },
           "Swashbuckle.AspNetCore.Newtonsoft": {
             "target": "Package",
-            "version": "[6.2.3, )"
+            "version": "[6.3.1, )"
           }
         },
         "imports": [

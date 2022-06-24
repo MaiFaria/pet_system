@@ -28,7 +28,7 @@ namespace PS.Identity.Configurations
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("./v1/swagger.json", "v1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
 
             });
 
