@@ -35,8 +35,8 @@ namespace PS.Identity.API.Controllers
 
             var user = new IdentityUser
             {
-                UserName = userRegister.Email,
-                Email = userRegister.Email,
+                UserName = userRegister.Email.ToString(),
+                Email = userRegister.Email.ToString(),
                 EmailConfirmed = true
             };
 
@@ -44,7 +44,7 @@ namespace PS.Identity.API.Controllers
 
             if (result.Succeeded)
             {
-                return CustomResponse(await GenerateJwt(userRegister.Email));
+                return CustomResponse(await GenerateJwt(userRegister.Email.ToString()));
             }
 
             foreach (var error in result.Errors)

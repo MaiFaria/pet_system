@@ -16,8 +16,41 @@ namespace PS.Tests.Entities.Client
             _output = output;
         }
 
-        #region 01 - Name
-        [Fact(DisplayName = "#01 - Não Deve criar sem um Nome")]
+        [Fact(DisplayName = "#0 - Deve criar um model de Client")]
+        public void MustCreateAddressModel()
+        {
+            var builder = _builder.New();
+            var model = _builder.Build();
+            model.ValidateForPersistence().Wait();
+            Helpers.Assert.Equal<PS.Client.API.Models.Client>(builder, model, _output);
+        }
+
+        #region 01 - Id
+        [Fact(DisplayName = "#01 - Não Deve criar sem um Id")]
+        public void MustNotCreateId()
+        {
+            var builder = _builder.New();
+            builder.Id = Guid.Empty;
+            var model = _builder.Build();
+            model.ValidateForPersistence().Wait();
+
+            Assert.False(model.IsValid, string.Join(Environment.NewLine, model.ValidationResult.Errors), _output, model);
+        }
+
+        [Fact(DisplayName = "#01.1 - Deve criar com Id")]
+        public void MustCreateId()
+        {
+            var builder = _builder.New();
+            builder.Id = _builder.Id;
+            var model = _builder.Build();
+            model.ValidateForPersistence().Wait();
+
+            Assert.True(model.IsValid, string.Join(Environment.NewLine, model.ValidationResult.Errors), _output, model);
+        }
+        #endregion
+
+        #region 02 - Name
+        [Fact(DisplayName = "#02 - Não Deve criar sem um Nome")]
         public void MustNotCreateName()
         {
             var builder = _builder.New();
@@ -28,7 +61,7 @@ namespace PS.Tests.Entities.Client
             Assert.False(model.IsValid, string.Join(Environment.NewLine, model.ValidationResult.Errors), _output, model);
         }
 
-        [Fact(DisplayName = "#01.1 - Deve criar com nome válido")]
+        [Fact(DisplayName = "#02.1 - Deve criar com nome válido")]
         public void MustCreateName()
         {
             var builder = _builder.New();
@@ -40,8 +73,8 @@ namespace PS.Tests.Entities.Client
         }
         #endregion
 
-        #region 02 - E-mail
-        [Fact(DisplayName = "#02 - Não Deve criar sem um E-mail")]
+        #region 03 - E-mail
+        [Fact(DisplayName = "#03 - Não Deve criar sem um E-mail")]
         public void MustNotCreateEmail()
         {
             var builder = _builder.New();
@@ -52,7 +85,7 @@ namespace PS.Tests.Entities.Client
             Assert.False(model.IsValid, string.Join(Environment.NewLine, model.ValidationResult.Errors), _output, model);
         }
 
-        [Fact(DisplayName = "#02.1 - Deve criar com nome E-mail")]
+        [Fact(DisplayName = "#03.1 - Deve criar com nome E-mail")]
         public void MustCreateEmail()
         {
             var builder = _builder.New();
@@ -64,8 +97,8 @@ namespace PS.Tests.Entities.Client
         }
         #endregion
 
-        #region 03 - CPF
-        [Fact(DisplayName = "#03 - Não Deve criar sem um CPF")]
+        #region 04 - CPF
+        [Fact(DisplayName = "#04 - Não Deve criar sem um CPF")]
         public void MustNotCreateCpf()
         {
             var builder = _builder.New();
@@ -76,7 +109,7 @@ namespace PS.Tests.Entities.Client
             Assert.False(model.IsValid, string.Join(Environment.NewLine, model.ValidationResult.Errors), _output, model);
         }
 
-        [Fact(DisplayName = "#03.1 - Deve criar com nome CPF")]
+        [Fact(DisplayName = "#04.1 - Deve criar com nome CPF")]
         public void MustCreateCpf()
         {
             var builder = _builder.New();
@@ -88,8 +121,8 @@ namespace PS.Tests.Entities.Client
         }
         #endregion
 
-        #region 04 -Exclused
-        [Fact(DisplayName = "#04 - Deve criar com Exclusão de cadastro false")]
+        #region 05 -Exclused
+        [Fact(DisplayName = "#05 - Deve criar com Exclusão de cadastro false")]
         public void MustNotCreateExclused()
         {
             var builder = _builder.New();
@@ -100,7 +133,7 @@ namespace PS.Tests.Entities.Client
             Assert.True(model.IsValid, string.Join(Environment.NewLine, model.ValidationResult.Errors), _output, model);
         }
 
-        [Fact(DisplayName = "#4.1 - Deve criar com Exclusão de cadastro true")]
+        [Fact(DisplayName = "#5.1 - Deve criar com Exclusão de cadastro true")]
         public void MustCreateExclused()
         {
             var builder = _builder.New();

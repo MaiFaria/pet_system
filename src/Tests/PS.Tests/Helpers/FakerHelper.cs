@@ -7,6 +7,11 @@ namespace PS.Tests.Helpers
 {
     public static class FakerHelper
     {
+        public static Guid GenerateGuid(this Faker faker)
+        {
+            return Guid.NewGuid();
+        }
+
         public static decimal GenerateId(this Faker faker)
         {
             return faker.Random.Number(min: 1, max: (10 ^ 18 - 1));
@@ -17,22 +22,9 @@ namespace PS.Tests.Helpers
             return faker.Make<decimal?>(count: faker.Random.Number(min: 1, max: 10), action: () => GenerateId(faker)).ToList();
         }
 
-        public static string GenerateName(this Faker faker)
+        public static bool GenerateTipoBool(this Faker faker)
         {
-            return faker.Person.FullName;
-        }
-
-        public static Cpf GenerateCPF(this Faker faker)
-        {
-            var cpf = new Cpf();
-            cpf.Number = faker.GenerateCPFString();
-
-            return cpf;
-        }
-
-        public static string GenerateCPFString(this Faker faker)
-        {
-            return faker.Random.Hash(11, false);
+            return faker.Random.Bool();
         }
 
         public static Email GenerateEmail(this Faker faker)
@@ -48,9 +40,10 @@ namespace PS.Tests.Helpers
             return faker.Internet.Email();
         }
 
-        public static string GenerateCNPJ(this Faker faker)
+        #region Client
+        public static string GenerateName(this Faker faker)
         {
-            return CNPJ.Gerar();
+            return faker.Person.FullName;
         }
 
         public static string GenerateUserName(this Faker faker)
@@ -58,14 +51,76 @@ namespace PS.Tests.Helpers
             return faker.Person.UserName;
         }
 
+        public static Cpf GenerateCPF(this Faker faker)
+        {
+            var cpf = new Cpf();
+            cpf.Number = faker.GenerateCPFString();
+
+            return cpf;
+        }
+
+        public static string GenerateCPFString(this Faker faker)
+        {
+            return faker.Random.Hash(11, false);
+        }
+
+        public static string GenerateCNPJ(this Faker faker)
+        {
+            return CNPJ.Gerar();
+        }
+
         public static string GeneratePassword(this Faker faker)
         {
             return faker.Internet.Password();
         }
 
-        public static bool GerarTipoBool(this Faker faker)
+        public static PS.Client.API.Models.Client GenerateClient(this Faker faker)
         {
-            return faker.Random.Bool();
+            var client = new PS.Client.API.Models.Client();
+            client.Id = faker.GenerateGuid();
+            client.Name = faker.Person.FullName;
+            client.Email = faker.GenerateEmail();
+            client.Cpf = faker.GenerateCPF();
+            client.Exclused = faker.Random.Bool();
+
+            return client;
+        }
+        #endregion
+
+        #region Address 
+        public static string GenerateAddressPublicPlace(this Faker faker)
+        {
+            return faker.Address.StreetName();
+        }
+
+        public static string GenerateAdressNumber(this Faker faker)
+        {
+            return faker.Address.BuildingNumber();
+        }
+
+        public static string GenerateAddressComplement(this Faker faker)
+        {
+            return faker.Person.Address.Suite;
+        }
+
+        public static string GenerateAddressDistrict(this Faker faker)
+        {
+            return faker.Address.State();
+        }
+
+        public static string GenerateAddressCity(this Faker faker)
+        {
+            return faker.Address.City();
+        }
+
+        public static string GenerateAddressState(this Faker faker)
+        {
+            return faker.Address.State();
+        }
+
+        public static string GenerateAddressCep(this Faker faker)
+        {
+            return faker.Person.Address.ZipCode;
         }
 
         public static Address GenerateAddress(this Faker faker)
@@ -87,17 +142,6 @@ namespace PS.Tests.Helpers
         {
             return faker.Address.FullAddress();
         }
-
-        public static PS.Client.API.Models.Client GenerateClient(this Faker faker)
-        {
-            var client = new PS.Client.API.Models.Client();
-            client.Name = faker.Person.FullName;
-            client.Email = faker.GenerateEmail();
-            client.Cpf = faker.GenerateCPF();
-            client.Exclused = faker.Random.Bool();
-            client.Address = faker.GenerateAddress();
-
-            return client;
-        }
+        #endregion
     }
 }

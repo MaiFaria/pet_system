@@ -7,6 +7,10 @@ namespace PS.Client.API.Validations
     {
         public UserClientValidation()
         {
+            RuleFor(row => row.Id)
+                .NotEmpty()
+                .WithMessage(Mensagens.MSG_ID_OBRIGATORIO);
+
             RuleFor(row => row.Name)
                 .NotEmpty()
                 .WithMessage(Mensagens.MSG_NOME_OBRIGATORIO);

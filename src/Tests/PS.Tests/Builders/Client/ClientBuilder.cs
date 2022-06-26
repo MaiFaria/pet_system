@@ -9,6 +9,7 @@ namespace PS.Tests.Builders.Client
     {
         private readonly Faker? _faker;
 
+        public Guid Id { get; set; }
         public string? Name { get; set; }
         public Email? Email { get; set; }
         public Cpf? Cpf { get; set; }
@@ -22,10 +23,11 @@ namespace PS.Tests.Builders.Client
 
         public ClientBuilder New()
         {
+            this.Id = _faker.GenerateGuid();
             this.Name = _faker.GenerateName();
             this.Email = _faker.GenerateEmail();
             this.Cpf = _faker.GenerateCPF();
-            this.Exclused = _faker.GerarTipoBool();
+            this.Exclused = _faker.GenerateTipoBool();
 
             return this;
         }
@@ -33,6 +35,9 @@ namespace PS.Tests.Builders.Client
         public PS.Client.API.Models.Client Build()
         {
             var model = new PS.Client.API.Models.Client();
+
+            if (this.Id != null)
+                model.Id = this.Id;
 
             if (this.Name != null)
                 model.Name = this.Name;

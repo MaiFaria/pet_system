@@ -1,5 +1,6 @@
 ﻿using Bogus;
 using PS.Core.DomainObjects;
+using PS.Core.Messages;
 using PS.Tests.Helpers;
 using static PS.Identity.API.Models.UserViewModels;
 
@@ -10,10 +11,11 @@ namespace PS.Tests.Builders.Identity
         private readonly Faker? _faker;
 
         public string? Name { get; set; }
-        public string? Cpf { get; set; }
-        public string? Email { get; set; }
+        public Cpf? Cpf { get; set; }
+        public Email? Email { get; set; }
         public string? Password { get; set; }
         public string? PasswordConfirmation { get; set; }
+        public Guid Id { get; set; }
 
         public UserRegisterBuilder()
         {
@@ -23,10 +25,11 @@ namespace PS.Tests.Builders.Identity
         public UserRegisterBuilder New()
         {
             this.Name = _faker.GenerateName();
-            this.Cpf = _faker.GenerateCPFString();
-            this.Email = _faker.GenerateEmailString();
+            this.Cpf = _faker.GenerateCPF();
+            this.Email = _faker.GenerateEmail();
             this.Password = _faker.GeneratePassword();
             this.PasswordConfirmation = Password;
+            this.Id = _faker.GenerateGuid();
 
             return this;
         }
@@ -49,6 +52,9 @@ namespace PS.Tests.Builders.Identity
 
             if (this.PasswordConfirmation != null)
                 model.PasswordConfirmation = this.PasswordConfirmation;
+
+            if (this.Id != null)
+                model.Id = this.Id;
 
             return model;
         }

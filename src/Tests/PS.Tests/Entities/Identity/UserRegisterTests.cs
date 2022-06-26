@@ -16,8 +16,17 @@ namespace PS.Tests.Entities.Identity
             _output = output;
         }
 
-        #region 01 - Nome
-        [Fact(DisplayName = "#01 - Não Deve criar sem um Nome")]
+        [Fact(DisplayName = "#0 - Deve criar um model de UserRegister")]
+        public void MustCreateUserRegister()
+        {
+            var builder = _builder.New();
+            var model = _builder.Build();
+            model.ValidateForPersistence().Wait();
+            Helpers.Assert.Equal<PS.Client.API.Models.Client>(builder, model, _output);
+        }
+
+        #region 01 - Name
+        [Fact(DisplayName = "#01 - Não Deve criar sem um Name")]
         public void MustNotCreateName()
         {
             var builder = _builder.New();
@@ -28,7 +37,7 @@ namespace PS.Tests.Entities.Identity
             Assert.False(model.IsValid, string.Join(Environment.NewLine, model.ValidationResult.Errors), _output, model);
         }
 
-        [Fact(DisplayName = "#01.1 - Deve criar com nome válido")]
+        [Fact(DisplayName = "#01.1 - Deve criar com name válido")]
         public void MustCreateName()
         {
             var builder = _builder.New();
@@ -127,6 +136,30 @@ namespace PS.Tests.Entities.Identity
         {
             var builder = _builder.New();
             builder.PasswordConfirmation = _builder.PasswordConfirmation;
+            var model = _builder.Build();
+            model.ValidateForPersistence().Wait();
+
+            Assert.True(model.IsValid, string.Join(Environment.NewLine, model.ValidationResult.Errors), _output, model);
+        }
+        #endregion
+
+        #region 05 - Id
+        [Fact(DisplayName = "#05 - Não Deve criar sem um Id")]
+        public void MustNotCreateShorterId()
+        {
+            var builder = _builder.New();
+            builder.Id = Guid.Empty;
+            var model = _builder.Build();
+            model.ValidateForPersistence().Wait();
+
+            Assert.False(model.IsValid, string.Join(Environment.NewLine, model.ValidationResult.Errors), _output, model);
+        }
+
+        [Fact(DisplayName = "#05.1 - Deve criar um Id")]
+        public void MustCreateShorterId()
+        {
+            var builder = _builder.New();
+            builder.Id = _builder.Id;
             var model = _builder.Build();
             model.ValidateForPersistence().Wait();
 

@@ -33,7 +33,6 @@ namespace PS.Core.DomainObjects
         }
 
         #region Comparisons
-
         public override bool Equals(object obj)
         {
             var compareTo = obj as Entity;
@@ -69,17 +68,14 @@ namespace PS.Core.DomainObjects
         {
             return $"{GetType().Name} [Id={Id}]";
         }
-
         #endregion
 
         #region Validations
-
         [JsonIgnore]
         public ValidationResult ValidationResult { get; set; }
 
         [JsonIgnore]
         public bool IsValid => ValidationResult.IsValid;
-
         #endregion
     }
 }

@@ -31,6 +31,10 @@ namespace PS.Identity.API.Validations
                     if (row.PasswordConfirmation != row.Password)
                         contexto.AddFailure(Mensagens.MSG_SENHA_NAO_CONFERE);
                 });
+
+            RuleFor(row => row.Id)
+                .NotEmpty()
+                .WithMessage(Mensagens.MSG_ID_OBRIGATORIO);
         }
     }
 }
