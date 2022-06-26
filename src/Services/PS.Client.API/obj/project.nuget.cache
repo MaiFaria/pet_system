@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "3lJvF1yQ5gBgdEpSUPNkmxyKWqmAiOU2GQf6UmraVTWd3+GGIwkGbWXrWFuxdEt7elLS/9KAcRrCbUxDteGMiw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Client.API\\PS.Client.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\maiara.santos\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
+    "C:\\Users\\maiara.santos\\.nuget\\packages\\fluentvalidation\\11.0.3\\fluentvalidation.11.0.3.nupkg.sha512",
+    "C:\\Users\\maiara.santos\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\maiara.santos\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\maiara.santos\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.15.1\\microsoft.visualstudio.azure.containers.tools.targets.1.15.1.nupkg.sha512"
+  ],
+  "logs": []
+}

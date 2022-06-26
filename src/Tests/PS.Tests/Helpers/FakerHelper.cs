@@ -1,4 +1,6 @@
 ﻿using Bogus;
+using PS.Client.API.Models;
+using PS.Core.DomainObjects;
 using PS.Tests.Utils;
 
 namespace PS.Tests.Helpers
@@ -20,12 +22,28 @@ namespace PS.Tests.Helpers
             return faker.Person.FullName;
         }
 
-        public static string GenerateCPF(this Faker faker)
+        public static Cpf GenerateCPF(this Faker faker)
         {
-            return CPF.Gerar();
+            var cpf = new Cpf();
+            cpf.Number = faker.GenerateCPFString();
+
+            return cpf;
         }
 
-        public static string GenerateEmail(this Faker faker)
+        public static string GenerateCPFString(this Faker faker)
+        {
+            return faker.Random.Hash(11, false);
+        }
+
+        public static Email GenerateEmail(this Faker faker)
+        {
+            var email = new Email();
+            email.Address = faker.GenerateEmailString();
+
+            return email;
+        }
+
+        public static string GenerateEmailString(this Faker faker)
         {
             return faker.Internet.Email();
         }
@@ -43,6 +61,43 @@ namespace PS.Tests.Helpers
         public static string GeneratePassword(this Faker faker)
         {
             return faker.Internet.Password();
+        }
+
+        public static bool GerarTipoBool(this Faker faker)
+        {
+            return faker.Random.Bool();
+        }
+
+        public static Address GenerateAddress(this Faker faker)
+        {
+            var address = new Address();
+            address.PublicPlace = faker.Person.Address.Street;
+            address.Number = faker.Random.AlphaNumeric(5);
+            address.Complement = faker.Person.Address.Suite;
+            address.District = faker.Address.State();
+            address.City = faker.Address.City();
+            address.State = faker.Address.State();
+            address.Cep = faker.Person.Address.ZipCode;
+            address.ClientId = faker.Random.Guid();
+
+            return address;
+        }
+
+        public static string GenerateAddressString(this Faker faker)
+        {
+            return faker.Address.FullAddress();
+        }
+
+        public static PS.Client.API.Models.Client GenerateClient(this Faker faker)
+        {
+            var client = new PS.Client.API.Models.Client();
+            client.Name = faker.Person.FullName;
+            client.Email = faker.GenerateEmail();
+            client.Cpf = faker.GenerateCPF();
+            client.Exclused = faker.Random.Bool();
+            client.Address = faker.GenerateAddress();
+
+            return client;
         }
     }
 }

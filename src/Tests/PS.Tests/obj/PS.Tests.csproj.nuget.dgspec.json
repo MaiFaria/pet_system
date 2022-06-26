@@ -5,28 +5,156 @@
   },
   "projects": {
     "C:\\Users\\maiara.santos\\pet_system\\src\\Building Blocks\\PS.Core\\PS.Core.csproj": {
+      "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\maiara.santos\\pet_system\\src\\Building Blocks\\PS.Core\\PS.Core.csproj",
         "projectName": "PS.Core",
         "projectPath": "C:\\Users\\maiara.santos\\pet_system\\src\\Building Blocks\\PS.Core\\PS.Core.csproj",
+        "packagesPath": "C:\\Users\\maiara.santos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\maiara.santos\\pet_system\\src\\Building Blocks\\PS.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\maiara.santos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
         "frameworks": {
-          "net48": {
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
         }
       },
       "frameworks": {
-        "net48": {}
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Bogus": {
+              "target": "Package",
+              "version": "[34.0.2, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.0.3, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
       }
     },
-    "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity\\PS.Identity.csproj": {
+    "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Client.API\\PS.Client.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity\\PS.Identity.csproj",
-        "projectName": "PS.Identity",
-        "projectPath": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity\\PS.Identity.csproj",
+        "projectUniqueName": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Client.API\\PS.Client.API.csproj",
+        "projectName": "PS.Client.API",
+        "projectPath": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Client.API\\PS.Client.API.csproj",
         "packagesPath": "C:\\Users\\maiara.santos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity\\obj\\",
+        "outputPath": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Client.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\maiara.santos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\maiara.santos\\pet_system\\src\\Building Blocks\\PS.Core\\PS.Core.csproj": {
+                "projectPath": "C:\\Users\\maiara.santos\\pet_system\\src\\Building Blocks\\PS.Core\\PS.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.15.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity.API\\PS.Identity.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity.API\\PS.Identity.API.csproj",
+        "projectName": "PS.Identity.API",
+        "projectPath": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity.API\\PS.Identity.API.csproj",
+        "packagesPath": "C:\\Users\\maiara.santos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -188,8 +316,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity\\PS.Identity.csproj": {
-                "projectPath": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity\\PS.Identity.csproj"
+              "C:\\Users\\maiara.santos\\pet_system\\src\\Building Blocks\\PS.Core\\PS.Core.csproj": {
+                "projectPath": "C:\\Users\\maiara.santos\\pet_system\\src\\Building Blocks\\PS.Core\\PS.Core.csproj"
+              },
+              "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Client.API\\PS.Client.API.csproj": {
+                "projectPath": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Client.API\\PS.Client.API.csproj"
+              },
+              "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity.API\\PS.Identity.API.csproj": {
+                "projectPath": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity.API\\PS.Identity.API.csproj"
               }
             }
           }
@@ -208,31 +342,17 @@
               "target": "Package",
               "version": "[34.0.2, )"
             },
-            "FluentValidation": {
-              "target": "Package",
-              "version": "[11.0.3, )"
-            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.1.0, )"
             },
-            "Moq": {
-              "target": "Package",
-              "version": "[4.18.1, )"
-            },
             "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.2, )"
             },
-            "xunit.abstractions": {
-              "target": "Package",
-              "version": "[2.0.3, )"
-            },
-            "xunit.assert": {
-              "target": "Package",
-              "version": "[2.4.1, )"
-            },
-            "xunit.extensibility.core": {
+            "xunit": {
               "target": "Package",
               "version": "[2.4.1, )"
             },
@@ -240,7 +360,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.4.5, )"
+              "version": "[2.4.3, )"
             }
           },
           "imports": [
