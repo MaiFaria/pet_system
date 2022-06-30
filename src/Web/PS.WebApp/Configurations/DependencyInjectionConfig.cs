@@ -1,5 +1,9 @@
-﻿using PS.WebApp.Extensions;
+﻿using Polly;
+using Polly.Extensions.Http;
+using Polly.Retry;
+using PS.WebApi.Core.User;
 using PS.WebApp.Services;
+using PS.WebApp.Services.Handlers;
 
 namespace PS.WebApp.Configurations
 {
@@ -9,7 +13,48 @@ namespace PS.WebApp.Configurations
         {
             services.AddHttpClient<IAuthenticationService, AuthenticationService>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddScoped<IUser, AspNetUser>();
+            services.AddScoped<IAspNetUser, AspNetUser>();
+
+            #region HttpServices
+
+            services.AddTransient<HttpClientAuthorizationDelegatingHandler>();
+
+            services.AddHttpClient<IAuthenticationService, AuthenticationService>()
+                .AddPolicyHandler(PollyExtensions.WaitToTry())
+                .AddTransientHttpErrorPolicy(
+                    p => p.CircuitBreakerAsync(5, TimeSpan.FromSeconds(30)));
+
+            services.AddHttpClient<IClientService, ClientService>()
+                .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
+                .AddPolicyHandler(PollyExtensions.WaitToTry())
+                .AddTransientHttpErrorPolicy(
+                    p => p.CircuitBreakerAsync(5, TimeSpan.FromSeconds(30)));
+
+            #endregion
         }
     }
+
+    #region PollyExtension
+    public static class PollyExtensions
+    {
+        public static AsyncRetryPolicy<HttpResponseMessage> WaitToTry()
+        {
+            var retry = HttpPolicyExtensions
+                .HandleTransientHttpError()
+                .WaitAndRetryAsync(new[]
+                {
+                    TimeSpan.FromSeconds(1),
+                    TimeSpan.FromSeconds(5),
+                    TimeSpan.FromSeconds(10),
+                }, (outcome, timespan, retryCount, context) =>
+                {
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine($"Tentando pela {retryCount} vez!");
+                    Console.ForegroundColor = ConsoleColor.White;
+                });
+
+            return retry;
+        }
+    }
+    #endregion
 }

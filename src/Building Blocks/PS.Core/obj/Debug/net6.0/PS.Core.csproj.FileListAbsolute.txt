@@ -1,0 +1,12 @@
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.Core\bin\Debug\net6.0\PS.Core.deps.json
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.Core\bin\Debug\net6.0\PS.Core.dll
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.Core\bin\Debug\net6.0\PS.Core.pdb
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.Core\obj\Debug\net6.0\PS.Core.csproj.AssemblyReference.cache
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.Core\obj\Debug\net6.0\PS.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.Core\obj\Debug\net6.0\PS.Core.AssemblyInfoInputs.cache
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.Core\obj\Debug\net6.0\PS.Core.AssemblyInfo.cs
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.Core\obj\Debug\net6.0\PS.Core.csproj.CoreCompileInputs.cache
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.Core\obj\Debug\net6.0\PS.Core.dll
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.Core\obj\Debug\net6.0\refint\PS.Core.dll
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.Core\obj\Debug\net6.0\PS.Core.pdb
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.Core\obj\Debug\net6.0\ref\PS.Core.dll

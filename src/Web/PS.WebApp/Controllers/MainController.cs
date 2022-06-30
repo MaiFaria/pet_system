@@ -1,23 +1,33 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PS.WebApp.Models;
+using PS.Core.Communication;
 
 namespace PS.WebApp.Controllers
 {
     public class MainController : Controller
     {
-        protected bool ResponsePossuiErros(ResponseResult resposta)
+        protected bool ResponseHasErrors(ResponseResult response)
         {
-            if (resposta != null && resposta.Errors.Mensagens.Any())
+            if (response != null && response.Errors.Messages.Any())
             {
-                foreach (var mensagem in resposta.Errors.Mensagens)
+                foreach (var message in response.Errors.Messages)
                 {
-                    ModelState.AddModelError(string.Empty, mensagem);
+                    ModelState.AddModelError(string.Empty, message);
                 }
 
                 return true;
             }
 
             return false;
+        }
+
+        protected void AddErrorValidation(string message)
+        {
+            ModelState.AddModelError(string.Empty, message);
+        }
+
+        protected bool ValidOperation()
+        {
+            return ModelState.ErrorCount == 0;
         }
     }
 }

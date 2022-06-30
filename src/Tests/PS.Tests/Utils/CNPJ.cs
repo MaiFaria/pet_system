@@ -1,4 +1,4 @@
-﻿using PS.Tests.Builders;
+﻿using PS.Core.DomainObjects;
 
 namespace PS.Tests.Utils
 {

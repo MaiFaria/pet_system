@@ -1,4 +1,5 @@
 is_global = true
+build_property.RefitInternalNamespace = PS.WebApp
 build_property.TargetFramework = net6.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
@@ -29,6 +30,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/maiara.santos/pet_system/src/Web/PS.WebApp/Views/Identity/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlbnRpdHlcUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/maiara.santos/pet_system/src/Web/PS.WebApp/Views/Shared/Components/Paginacao/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUGFnaW5hY2FvXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/maiara.santos/pet_system/src/Web/PS.WebApp/Views/Shared/Components/Summary/Default.cshtml]

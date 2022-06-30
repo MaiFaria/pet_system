@@ -35,8 +35,6 @@ namespace PS.WebApp
             services.AddMvcConfiguration(Configuration);
 
             services.RegisterServices();
-
-            services.AddRazorPages(); ;
         }
 
         public void Configure(WebApplication app, IWebHostEnvironment env)

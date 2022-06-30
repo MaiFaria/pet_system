@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "LBF0ajqbyxFzH5vT9fvYmT3L3IBLxdW7598E83q5WrQ=",
+  "Source": "PS.Client.API",
+  "BasePath": "_content/PS.Client.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

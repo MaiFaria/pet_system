@@ -2,6 +2,7 @@
 {
     public class AppSettings
     {
-        public string AutenticationUrl { get; set; }
+        public string AuthenticationUrl { get; set; }
+        public string ClientUrl { get; set; }
     }
 }
