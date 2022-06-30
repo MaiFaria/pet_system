@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "g2M8r+zVkE1coWFTcDwxih4Cewf5m1IYk4qfpeemcL0=",
+  "Source": "PS.Catalog.API",
+  "BasePath": "_content/PS.Catalog.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -16,6 +16,11 @@
             public const string CEP   = "Cep";
             public const string CIDADE   = "Cidade";
             public const string ESTADO   = "Estado";
+            public const string DESCRICAO   = "Descrição";
+            public const string PRECO   = "Price";
+            public const string DATAREGISTRO   = "Data de Registro";
+            public const string IMAGEM   = "Imagem";
+            public const string QUANTIDADEESTOQUE   = "Quantidade em estoque";
         }
 
         public static class Mensagens
@@ -43,6 +48,11 @@
             public static string MSG_CEP_OBRIGATORIO => string.Format(MSG_GEN_CAMPO_OBRIGATORIO, Campos.CEP);
             public static string MSG_CIDADE_OBRIGATORIO => string.Format(MSG_GEN_CAMPO_OBRIGATORIO, Campos.CIDADE);
             public static string MSG_ESTADO_OBRIGATORIO => string.Format(MSG_GEN_CAMPO_OBRIGATORIO, Campos.ESTADO);
+            public static string MSG_DESCRICAO_OBRIGATORIO => string.Format(MSG_GEN_CAMPO_OBRIGATORIO, Campos.DESCRICAO);
+            public static string MSG_PRECO_OBRIGATORIO => string.Format(MSG_GEN_CAMPO_OBRIGATORIO, Campos.PRECO);
+            public static string MSG_DATAREGISTRO_OBRIGATORIO => string.Format(MSG_GEN_CAMPO_OBRIGATORIO, Campos.DATAREGISTRO);
+            public static string MSG_IMAGEM_OBRIGATORIO => string.Format(MSG_GEN_CAMPO_OBRIGATORIO, Campos.IMAGEM);
+            public static string MSG_QUANTIDADEESTOQUE_OBRIGATORIO => string.Format(MSG_GEN_CAMPO_OBRIGATORIO, Campos.QUANTIDADEESTOQUE);
         }
     }
 }

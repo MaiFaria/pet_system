@@ -178,3 +178,8 @@ C:\Users\maiara.santos\pet_system\src\Tests\PS.Tests\obj\Debug\net6.0\refint\PS.
 C:\Users\maiara.santos\pet_system\src\Tests\PS.Tests\obj\Debug\net6.0\PS.Tests.pdb
 C:\Users\maiara.santos\pet_system\src\Tests\PS.Tests\obj\Debug\net6.0\PS.Tests.genruntimeconfig.cache
 C:\Users\maiara.santos\pet_system\src\Tests\PS.Tests\obj\Debug\net6.0\ref\PS.Tests.dll
+C:\Users\maiara.santos\pet_system\src\Tests\PS.Tests\bin\Debug\net6.0\PS.Catalog.API.deps.json
+C:\Users\maiara.santos\pet_system\src\Tests\PS.Tests\bin\Debug\net6.0\PS.Catalog.API.runtimeconfig.json
+C:\Users\maiara.santos\pet_system\src\Tests\PS.Tests\bin\Debug\net6.0\PS.Catalog.API.exe
+C:\Users\maiara.santos\pet_system\src\Tests\PS.Tests\bin\Debug\net6.0\PS.Catalog.API.dll
+C:\Users\maiara.santos\pet_system\src\Tests\PS.Tests\bin\Debug\net6.0\PS.Catalog.API.pdb

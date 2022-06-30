@@ -2694,6 +2694,23 @@
           "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
       },
+      "PS.Catalog.API/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FluentValidation": "11.1.0",
+          "PS.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PS.Catalog.API.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PS.Catalog.API.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "PS.Client.API/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -9018,6 +9035,11 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
+    "PS.Catalog.API/1.0.0": {
+      "type": "project",
+      "path": "../../Services/PS.Identity/PS.Catalog.API/PS.Catalog.API.csproj",
+      "msbuildProject": "../../Services/PS.Identity/PS.Catalog.API/PS.Catalog.API.csproj"
+    },
     "PS.Client.API/1.0.0": {
       "type": "project",
       "path": "../../Services/PS.Client.API/PS.Client.API.csproj",
@@ -9048,6 +9070,7 @@
     "net6.0": [
       "Bogus >= 34.0.2",
       "Microsoft.NET.Test.Sdk >= 17.1.0",
+      "PS.Catalog.API >= 1.0.0",
       "PS.Client.API >= 1.0.0",
       "PS.Core >= 1.0.0",
       "PS.Identity.API >= 1.0.0",
@@ -9096,6 +9119,9 @@
             },
             "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity.API\\PS.Identity.API.csproj": {
               "projectPath": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity.API\\PS.Identity.API.csproj"
+            },
+            "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity\\PS.Catalog.API\\PS.Catalog.API.csproj": {
+              "projectPath": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity\\PS.Catalog.API\\PS.Catalog.API.csproj"
             }
           }
         }
