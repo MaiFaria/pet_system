@@ -1,31 +1,25 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
-using PS.Identity.API.Extensions;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
+using PS.Core.Messages.Integration;
+using PS.Identity.API.Services;
+using PS.MessageBus;
+using PS.WebApi.Core.Controllers;
 using static PS.Identity.API.Models.UserViewModels;
 
 namespace PS.Identity.API.Controllers
 {
     [Route("api/identidade")]
-    [ApiController]
-    [Consumes("application/json")]
     public class AuthController : MainController
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly AppSettings _appSettings;
+        private readonly AuthenticationService _authenticationService;
+        private readonly IMessageBus _bus;
 
-        public AuthController(SignInManager<IdentityUser> signInManager,
-                              UserManager<IdentityUser> userManager,
-                              IOptions<AppSettings> appSettings)
+        public AuthController(
+           AuthenticationService authenticationService,
+           IMessageBus bus)
         {
-            _signInManager = signInManager;
-            _userManager = userManager;
-            _appSettings = appSettings.Value;
+            _authenticationService = authenticationService;
+            _bus = bus;
         }
 
         [HttpPost("nova-conta")]
@@ -40,16 +34,24 @@ namespace PS.Identity.API.Controllers
                 EmailConfirmed = true
             };
 
-            var result = await _userManager.CreateAsync(user, userRegister.Password);
+            var result = await _authenticationService.UserManager.CreateAsync(user, userRegister.Password);
 
             if (result.Succeeded)
             {
-                return CustomResponse(await GenerateJwt(userRegister.Email.ToString()));
+                var clientResult = await RegisterClient(userRegister);
+
+                if (!clientResult.ValidationResult.IsValid)
+                {
+                    await _authenticationService.UserManager.DeleteAsync(user);
+                    return CustomResponse(clientResult.ValidationResult);
+                }
+
+                return CustomResponse(await _authenticationService.GenerateJwt(userRegister.Email.ToString()));
             }
 
             foreach (var error in result.Errors)
             {
-                AdicionarErroProcessamento(error.Description);
+                AddProcessingError(error.Description);
             }
 
             return CustomResponse();
@@ -60,89 +62,60 @@ namespace PS.Identity.API.Controllers
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            var result = await _signInManager.PasswordSignInAsync(userLogin.Email, userLogin.Password,
+            var result = await _authenticationService.SignInManager.PasswordSignInAsync(userLogin.Email, userLogin.Password,
                 false, true);
 
             if (result.Succeeded)
             {
-                return CustomResponse(await GenerateJwt(userLogin.Email));
+                return CustomResponse(await _authenticationService.GenerateJwt(userLogin.Email));
             }
 
             if (result.IsLockedOut)
             {
-                AdicionarErroProcessamento("Usuário temporariamente bloqueado por tentativas inválidas");
+                AddProcessingError("Usuário temporariamente bloqueado por tentativas inválidas");
                 return CustomResponse();
             }
 
-            AdicionarErroProcessamento("Usuário ou Senha incorretos");
+            AddProcessingError("Usuário ou Senha incorretos");
             return CustomResponse();
         }
 
-        private async Task<UserResponseLogin> GenerateJwt(string email)
+        private async Task<ResponseMessage> RegisterClient(UserRegister userRegister)
         {
-            var user = await _userManager.FindByEmailAsync(email);
-            var claims = await _userManager.GetClaimsAsync(user);
+            var user = await _authenticationService.UserManager.FindByEmailAsync(userRegister.Email.ToString());
 
-            var identityClaims = await GetClaimsUser(claims, user);
-            var encodedToken = CodeToken(identityClaims);
+            var registeredUser = new RegisteredUserIntegrationEvent(
+                Guid.Parse(user.Id), userRegister.Name, userRegister.Email.ToString(), userRegister.Cpf.ToString());
 
-            return GetTokenResponse(encodedToken, user, claims);
+            try
+            {
+                return await _bus.RequestAsync<RegisteredUserIntegrationEvent, ResponseMessage>(registeredUser);
+            }
+            catch
+            {
+                await _authenticationService.UserManager.DeleteAsync(user);
+                throw;
+            }
         }
 
-        private async Task<ClaimsIdentity> GetClaimsUser(ICollection<Claim> claims, IdentityUser user)
+        [HttpPost("refresh-token")]
+        public async Task<ActionResult> RefreshToken([FromBody] string refreshToken)
         {
-            var userRoles = await _userManager.GetRolesAsync(user);
-
-            claims.Add(new Claim(JwtRegisteredClaimNames.Sub, user.Id));
-            claims.Add(new Claim(JwtRegisteredClaimNames.Email, user.Email));
-            claims.Add(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
-            claims.Add(new Claim(JwtRegisteredClaimNames.Nbf, ToUnixEpochDate(DateTime.UtcNow).ToString()));
-            claims.Add(new Claim(JwtRegisteredClaimNames.Iat, ToUnixEpochDate(DateTime.UtcNow).ToString(),
-                ClaimValueTypes.Integer64));
-            foreach (var userRole in userRoles)
+            if (string.IsNullOrEmpty(refreshToken))
             {
-                claims.Add(new Claim("role", userRole));
+                AddProcessingError("Refresh Token inválido");
+                return CustomResponse();
             }
 
-            var identityClaims = new ClaimsIdentity();
-            identityClaims.AddClaims(claims);
+            var token = await _authenticationService.GetRefreshToken(Guid.Parse(refreshToken));
 
-            return identityClaims;
-        }
-
-        private string CodeToken(ClaimsIdentity identityClaims)
-        {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
-            var token = tokenHandler.CreateToken(new SecurityTokenDescriptor
+            if (token is null)
             {
-                Issuer = _appSettings.Emissor,
-                Audience = _appSettings.ValidoEm,
-                Subject = identityClaims,
-                Expires = DateTime.UtcNow.AddHours(_appSettings.ExpiracaoHoras),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-            });
+                AddProcessingError("Refresh Token expirado");
+                return CustomResponse();
+            }
 
-            return tokenHandler.WriteToken(token);
+            return CustomResponse(await _authenticationService.GenerateJwt(token.Username));
         }
-
-        private UserResponseLogin GetTokenResponse(string encodedToken, IdentityUser user, IEnumerable<Claim> claims)
-        {
-            return new UserResponseLogin
-            {
-                AccessToken = encodedToken,
-                ExpiresIn = TimeSpan.FromHours(_appSettings.ExpiracaoHoras).TotalSeconds,
-                UserToken = new UserToken
-                {
-                    Id = user.Id,
-                    Email = user.Email,
-                    Claims = claims.Select(c => new UserClaim { Type = c.Type, Value = c.Value })
-                }
-            };
-        }
-
-        private static long ToUnixEpochDate(DateTime date)
-            => (long)Math.Round((date.ToUniversalTime() - new DateTimeOffset(1970, 1, 1, 0, 0, 0, TimeSpan.Zero))
-                .TotalSeconds);
     }
 }

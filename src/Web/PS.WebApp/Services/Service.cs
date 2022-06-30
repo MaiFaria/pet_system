@@ -1,4 +1,5 @@
-﻿using PS.WebApp.Extensions;
+﻿using PS.Core.Communication;
+using PS.WebApp.Extensions;
 using System.Text;
 using System.Text.Json;
 
@@ -6,7 +7,7 @@ namespace PS.WebApp.Services
 {
     public abstract class Service
     {
-        protected StringContent ObterConteudo(object dado)
+        protected StringContent GetContent(object dado)
         {
             return new StringContent(
                 JsonSerializer.Serialize(dado),
@@ -14,7 +15,7 @@ namespace PS.WebApp.Services
                 "application/json");
         }
 
-        protected async Task<T> DeserializarObjetoResponse<T>(HttpResponseMessage responseMessage)
+        protected async Task<T> DeserializeObjectResponse<T>(HttpResponseMessage responseMessage)
         {
             var options = new JsonSerializerOptions
             {
@@ -24,7 +25,7 @@ namespace PS.WebApp.Services
             return JsonSerializer.Deserialize<T>(await responseMessage.Content.ReadAsStringAsync(), options);
         }
 
-        protected bool TratarErrosResponse(HttpResponseMessage response)
+        protected bool HandleErrorResponse(HttpResponseMessage response)
         {
             switch ((int)response.StatusCode)
             {
@@ -40,6 +41,11 @@ namespace PS.WebApp.Services
 
             response.EnsureSuccessStatusCode();
             return true;
+        }
+
+        protected ResponseResult ReturnOk()
+        {
+            return new ResponseResult();
         }
     }
 }

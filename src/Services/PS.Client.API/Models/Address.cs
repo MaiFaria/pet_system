@@ -13,10 +13,11 @@ namespace PS.Client.API.Models
         public string? City { get; set; }
         public string? State { get; set; }
         public Guid ClientId { get; set; }
-        // EF Relation
-        public Client? Client { get; set; }
 
+        #region EF Relation
+        public Client? Client { get; set; }
         public Address() { }
+        #endregion
 
         public Address(string publicPlace, string number, string complement, string district, string cep, string city, string state, Guid clientId)
         {

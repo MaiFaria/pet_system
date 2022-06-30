@@ -1,0 +1,15 @@
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.MessageBus\bin\Debug\net6.0\PS.MessageBus.deps.json
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.MessageBus\bin\Debug\net6.0\PS.MessageBus.dll
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.MessageBus\bin\Debug\net6.0\PS.MessageBus.pdb
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.MessageBus\bin\Debug\net6.0\PS.Core.dll
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.MessageBus\bin\Debug\net6.0\PS.Core.pdb
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.MessageBus\obj\Debug\net6.0\PS.MessageBus.csproj.AssemblyReference.cache
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.MessageBus\obj\Debug\net6.0\PS.MessageBus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.MessageBus\obj\Debug\net6.0\PS.MessageBus.AssemblyInfoInputs.cache
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.MessageBus\obj\Debug\net6.0\PS.MessageBus.AssemblyInfo.cs
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.MessageBus\obj\Debug\net6.0\PS.MessageBus.csproj.CoreCompileInputs.cache
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.MessageBus\obj\Debug\net6.0\PS.MessageBus.csproj.CopyComplete
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.MessageBus\obj\Debug\net6.0\PS.MessageBus.dll
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.MessageBus\obj\Debug\net6.0\refint\PS.MessageBus.dll
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.MessageBus\obj\Debug\net6.0\PS.MessageBus.pdb
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.MessageBus\obj\Debug\net6.0\ref\PS.MessageBus.dll

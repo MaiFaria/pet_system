@@ -10,8 +10,10 @@ namespace PS.Client.API.Models
         public Cpf? Cpf { get; set; }
         public bool? Exclused { get; set; }
         public Address? Address { get; set; }
-        // EF Relation
+
+        #region EF Relation
         public Client() { }
+        #endregion
 
         public Client(Guid id, string name, string email, string cpf)
         {

@@ -1,0 +1,15 @@
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.WebApi.Core\bin\Debug\net6.0\PS.WebApi.Core.deps.json
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.WebApi.Core\bin\Debug\net6.0\PS.WebApi.Core.dll
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.WebApi.Core\bin\Debug\net6.0\PS.WebApi.Core.pdb
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.WebApi.Core\bin\Debug\net6.0\PS.Core.dll
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.WebApi.Core\bin\Debug\net6.0\PS.Core.pdb
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.WebApi.Core\obj\Debug\net6.0\PS.WebApi.Core.csproj.AssemblyReference.cache
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.WebApi.Core\obj\Debug\net6.0\PS.WebApi.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.WebApi.Core\obj\Debug\net6.0\PS.WebApi.Core.AssemblyInfoInputs.cache
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.WebApi.Core\obj\Debug\net6.0\PS.WebApi.Core.AssemblyInfo.cs
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.WebApi.Core\obj\Debug\net6.0\PS.WebApi.Core.csproj.CoreCompileInputs.cache
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.WebApi.Core\obj\Debug\net6.0\PS.WebApi.Core.csproj.CopyComplete
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.WebApi.Core\obj\Debug\net6.0\PS.WebApi.Core.dll
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.WebApi.Core\obj\Debug\net6.0\refint\PS.WebApi.Core.dll
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.WebApi.Core\obj\Debug\net6.0\PS.WebApi.Core.pdb
+C:\Users\maiara.santos\pet_system\src\Building Blocks\PS.WebApi.Core\obj\Debug\net6.0\ref\PS.WebApi.Core.dll

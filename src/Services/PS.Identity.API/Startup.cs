@@ -34,6 +34,8 @@ namespace PS.Identity.API
             services.AddApiConfiguration();
 
             services.AddSwaggerConfiguration();
+
+            services.AddMessageBusConfiguration(Configuration);
         }
 
         public void Configure(WebApplication app, IWebHostEnvironment env)

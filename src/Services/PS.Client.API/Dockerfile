@@ -8,6 +8,9 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["src/Services/PS.Client.API/PS.Client.API.csproj", "src/Services/PS.Client.API/"]
+COPY ["src/Building Blocks/PS.MessageBus/PS.MessageBus.csproj", "src/Building Blocks/PS.MessageBus/"]
+COPY ["src/Building Blocks/PS.Core/PS.Core.csproj", "src/Building Blocks/PS.Core/"]
+COPY ["src/Building Blocks/PS.WebApi.Core/PS.WebApi.Core.csproj", "src/Building Blocks/PS.WebApi.Core/"]
 RUN dotnet restore "src/Services/PS.Client.API/PS.Client.API.csproj"
 COPY . .
 WORKDIR "/src/src/Services/PS.Client.API"

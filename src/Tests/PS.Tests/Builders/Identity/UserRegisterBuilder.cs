@@ -1,6 +1,5 @@
 ﻿using Bogus;
 using PS.Core.DomainObjects;
-using PS.Core.Messages;
 using PS.Tests.Helpers;
 using static PS.Identity.API.Models.UserViewModels;
 

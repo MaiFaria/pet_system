@@ -5,15 +5,19 @@ namespace PS.WebApp.Controllers
 {
     public class HomeController : MainController
     {
-        public IActionResult Index()
+        [Route("sistema-indisponivel")]
+        public IActionResult SistemaIndisponivel()
         {
-            return View();
+            var modelErro = new ErrorViewModel
+            {
+                Message = "O sistema está temporariamente indisponível, isto pode ocorrer em momentos de sobrecarga de usuários.",
+                Title = "Sistema indisponível.",
+                ErroCode = 500
+            };
+
+            return View("Error", modelErro);
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
         [Route("erro/{id:length(3,3)}")]
         public IActionResult Error(int id)
@@ -22,21 +26,21 @@ namespace PS.WebApp.Controllers
 
             if (id == 500)
             {
-                modelErro.Mensagem = "Ocorreu um erro! Tente novamente mais tarde ou contate nosso suporte.";
-                modelErro.Titulo = "Ocorreu um erro!";
+                modelErro.Message = "Ocorreu um erro! Tente novamente mais tarde ou contate nosso suporte.";
+                modelErro.Title = "Ocorreu um erro!";
                 modelErro.ErroCode = id;
             }
             else if (id == 404)
             {
-                modelErro.Mensagem =
+                modelErro.Message =
                     "A página que está procurando não existe! <br />Em caso de dúvidas entre em contato com nosso suporte";
-                modelErro.Titulo = "Ops! Página não encontrada.";
+                modelErro.Title = "Ops! Página não encontrada.";
                 modelErro.ErroCode = id;
             }
             else if (id == 403)
             {
-                modelErro.Mensagem = "Você não tem permissão para fazer isto.";
-                modelErro.Titulo = "Acesso Negado";
+                modelErro.Message = "Você não tem permissão para fazer isto.";
+                modelErro.Title = "Acesso Negado";
                 modelErro.ErroCode = id;
             }
             else
