@@ -31,7 +31,7 @@ namespace PS.Client.API.Applications.Commands
                 return ValidationResult;
             }
 
-            _clienteRepository.Add(cliente);
+            _clienteRepository.AddCLient(cliente);
 
             cliente.AddEvent(new RegisteredClientEvent(message.Id, message.Name, message.Email, message.Cpf));
 

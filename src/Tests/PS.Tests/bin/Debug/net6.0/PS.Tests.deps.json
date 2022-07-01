@@ -10,6 +10,7 @@
         "dependencies": {
           "Bogus": "34.0.2",
           "Microsoft.NET.Test.Sdk": "17.1.0",
+          "PS.Catalog.API": "1.0.0",
           "PS.Client.API": "1.0.0",
           "PS.Core": "1.0.0",
           "PS.Identity.API": "1.0.0",
@@ -30,6 +31,14 @@
         }
       },
       "coverlet.collector/3.1.2": {},
+      "Dapper/2.0.123": {
+        "runtime": {
+          "lib/net5.0/Dapper.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.123.33578"
+          }
+        }
+      },
       "EasyNetQ/6.5.2": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
@@ -922,6 +931,17 @@
           }
         }
       },
+      "Polly.Extensions.Http/3.0.0": {
+        "dependencies": {
+          "Polly": "7.2.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Polly.Extensions.Http.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
+          }
+        }
+      },
       "RabbitMQ.Client/6.2.1": {
         "dependencies": {
           "System.Memory": "4.5.4",
@@ -1779,6 +1799,23 @@
         }
       },
       "xunit.runner.visualstudio/2.4.3": {},
+      "PS.Catalog.API/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.0.123",
+          "FluentValidation": "11.1.0",
+          "Microsoft.EntityFrameworkCore": "6.0.6",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.6",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.6",
+          "PS.MessageBus": "1.0.0",
+          "PS.WebApi.Core": "1.0.0",
+          "Swashbuckle.AspNetCore.Swagger": "6.3.1",
+          "Swashbuckle.AspNetCore.SwaggerGen": "6.3.1",
+          "Swashbuckle.AspNetCore.SwaggerUI": "6.3.1"
+        },
+        "runtime": {
+          "PS.Catalog.API.dll": {}
+        }
+      },
       "PS.Client.API/1.0.0": {
         "dependencies": {
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1",
@@ -1846,7 +1883,9 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0",
           "NetDevPack.Security.JwtExtensions": "6.0.2",
-          "PS.Core": "1.0.0"
+          "PS.Core": "1.0.0",
+          "Polly": "7.2.3",
+          "Polly.Extensions.Http": "3.0.0"
         },
         "runtime": {
           "PS.WebApi.Core.dll": {}
@@ -1873,6 +1912,13 @@
       "sha512": "sha512-wuLDIDKD5XMt0A7lE31JPenT7QQwZPFkP5rRpdJeblyXZ9MGLI8rYjvm5fvAKln+2/X+4IxxQDxBtwdrqKNLZw==",
       "path": "coverlet.collector/3.1.2",
       "hashPath": "coverlet.collector.3.1.2.nupkg.sha512"
+    },
+    "Dapper/2.0.123": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RDFF4rBLLmbpi6pwkY7q/M6UXHRJEOerplDGE5jwEkP/JGJnBauAClYavNKJPW1yOTWRPIyfj4is3EaJxQXILQ==",
+      "path": "dapper/2.0.123",
+      "hashPath": "dapper.2.0.123.nupkg.sha512"
     },
     "EasyNetQ/6.5.2": {
       "type": "package",
@@ -2356,6 +2402,13 @@
       "sha512": "sha512-DeCY0OFbNdNxsjntr1gTXHJ5pKUwYzp04Er2LLeN3g6pWhffsGuKVfMBLe1lw7x76HrPkLxKEFxBlpRxS2nDEQ==",
       "path": "polly/7.2.3",
       "hashPath": "polly.7.2.3.nupkg.sha512"
+    },
+    "Polly.Extensions.Http/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-drrG+hB3pYFY7w1c3BD+lSGYvH2oIclH8GRSehgfyP5kjnFnHKQuuBhuHLv+PWyFuaTDyk/vfRpnxOzd11+J8g==",
+      "path": "polly.extensions.http/3.0.0",
+      "hashPath": "polly.extensions.http.3.0.0.nupkg.sha512"
     },
     "RabbitMQ.Client/6.2.1": {
       "type": "package",
@@ -3056,6 +3109,11 @@
       "sha512": "sha512-kZZSmOmKA8OBlAJaquPXnJJLM9RwQ27H7BMVqfMLUcTi9xHinWGJiWksa3D4NEtz0wZ/nxd2mogObvBgJKCRhQ==",
       "path": "xunit.runner.visualstudio/2.4.3",
       "hashPath": "xunit.runner.visualstudio.2.4.3.nupkg.sha512"
+    },
+    "PS.Catalog.API/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "PS.Client.API/1.0.0": {
       "type": "project",

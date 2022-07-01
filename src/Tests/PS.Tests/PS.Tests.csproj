@@ -28,6 +28,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Building Blocks\PS.Core\PS.Core.csproj" />
+    <ProjectReference Include="..\..\Services\PS.Catalog.API\PS.Catalog.API.csproj" />
     <ProjectReference Include="..\..\Services\PS.Client.API\PS.Client.API.csproj" />
     <ProjectReference Include="..\..\Services\PS.Identity.API\PS.Identity.API.csproj" />
   </ItemGroup>

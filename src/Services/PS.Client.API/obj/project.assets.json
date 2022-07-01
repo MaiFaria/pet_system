@@ -581,6 +581,18 @@
           "lib/netstandard2.0/Polly.dll": {}
         }
       },
+      "Polly.Extensions.Http/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Polly": "7.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Polly.Extensions.Http.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Polly.Extensions.Http.dll": {}
+        }
+      },
       "RabbitMQ.Client/6.2.1": {
         "type": "package",
         "dependencies": {
@@ -981,7 +993,9 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0",
           "NetDevPack.Security.JwtExtensions": "6.0.2",
-          "PS.Core": "1.0.0"
+          "PS.Core": "1.0.0",
+          "Polly": "7.2.3",
+          "Polly.Extensions.Http": "3.0.0"
         },
         "compile": {
           "bin/placeholder/PS.WebApi.Core.dll": {}
@@ -2078,6 +2092,21 @@
         "lib/netstandard2.0/Polly.xml",
         "polly.7.2.3.nupkg.sha512",
         "polly.nuspec"
+      ]
+    },
+    "Polly.Extensions.Http/3.0.0": {
+      "sha512": "drrG+hB3pYFY7w1c3BD+lSGYvH2oIclH8GRSehgfyP5kjnFnHKQuuBhuHLv+PWyFuaTDyk/vfRpnxOzd11+J8g==",
+      "type": "package",
+      "path": "polly.extensions.http/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.1/Polly.Extensions.Http.dll",
+        "lib/netstandard1.1/Polly.Extensions.Http.xml",
+        "lib/netstandard2.0/Polly.Extensions.Http.dll",
+        "lib/netstandard2.0/Polly.Extensions.Http.xml",
+        "polly.extensions.http.3.0.0.nupkg.sha512",
+        "polly.extensions.http.nuspec"
       ]
     },
     "RabbitMQ.Client/6.2.1": {

@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\maiara.santos\pet_system\src\Web\PS.WebApp
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/maiara.santos/pet_system/src/Web/PS.WebApp/Views/Catalog/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0YWxvZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/maiara.santos/pet_system/src/Web/PS.WebApp/Views/Catalog/ProdutoDetalhe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0YWxvZ1xQcm9kdXRvRGV0YWxoZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/maiara.santos/pet_system/src/Web/PS.WebApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

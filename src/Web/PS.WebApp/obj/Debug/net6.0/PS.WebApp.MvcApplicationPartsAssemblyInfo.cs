@@ -12,7 +12,9 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Mvc.ApplicationParts.ApplicationPartAttribute("Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation")]
+[assembly: Microsoft.AspNetCore.Mvc.ApplicationParts.ApplicationPartAttribute("PS.Catalog.API")]
 [assembly: Microsoft.AspNetCore.Mvc.ApplicationParts.ApplicationPartAttribute("PS.WebApi.Core")]
+[assembly: Microsoft.AspNetCore.Mvc.ApplicationParts.ApplicationPartAttribute("Swashbuckle.AspNetCore.SwaggerGen")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
 

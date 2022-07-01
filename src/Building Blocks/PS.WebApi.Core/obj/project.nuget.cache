@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yoFjz4L2ICU3wOOzeuX4tMJiTMwHihH2k4Nn6uBzwvg2oSbMw7lMSyPUH4FoZadEKNRgdby05WNgPNrIL77lhQ==",
+  "dgSpecHash": "bYBTIIDK9S11muo8jfcfZHAFjafLBfOCWX4ewNwpAnocz4GdqTpK6l3U6VN0b2+QIWQHclZ25/TZfbsq/BxmmA==",
   "success": true,
   "projectFilePath": "C:\\Users\\maiara.santos\\pet_system\\src\\Building Blocks\\PS.WebApi.Core\\PS.WebApi.Core.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,8 @@
     "C:\\Users\\maiara.santos\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.10.0\\microsoft.identitymodel.protocols.openidconnect.6.10.0.nupkg.sha512",
     "C:\\Users\\maiara.santos\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.17.0\\microsoft.identitymodel.tokens.6.17.0.nupkg.sha512",
     "C:\\Users\\maiara.santos\\.nuget\\packages\\netdevpack.security.jwtextensions\\6.0.2\\netdevpack.security.jwtextensions.6.0.2.nupkg.sha512",
+    "C:\\Users\\maiara.santos\\.nuget\\packages\\polly\\7.2.3\\polly.7.2.3.nupkg.sha512",
+    "C:\\Users\\maiara.santos\\.nuget\\packages\\polly.extensions.http\\3.0.0\\polly.extensions.http.3.0.0.nupkg.sha512",
     "C:\\Users\\maiara.santos\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.17.0\\system.identitymodel.tokens.jwt.6.17.0.nupkg.sha512",
     "C:\\Users\\maiara.santos\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\maiara.santos\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",

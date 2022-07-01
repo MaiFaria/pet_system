@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Localization;
+﻿using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Localization;
 using PS.WebApp.Configurations;
 using PS.WebApp.Extensions;
 using System.Globalization;
@@ -11,11 +12,18 @@ namespace PS.WebApp.Configuration
         {
             services.AddControllersWithViews();
 
+            services.Configure<ForwardedHeadersOptions>(options =>
+            {
+                options.ForwardedHeaders =
+                    ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+            });
+
             services.Configure<AppSettings>(configuration);
         }
 
         public static void UseMvcConfiguration(this IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseForwardedHeaders();
             app.UseExceptionHandler("/erro/500");
             app.UseStatusCodePagesWithRedirects("/erro/{0}");
             app.UseHsts();
@@ -41,7 +49,7 @@ namespace PS.WebApp.Configuration
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Catalog}/{action=Index}/{id?}");
             });
         }
     }

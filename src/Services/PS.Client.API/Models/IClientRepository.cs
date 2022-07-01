@@ -4,7 +4,7 @@ namespace PS.Client.API.Models
 {
     public interface IClienteRepository : IRepository<Client>
     {
-        void Add(Client cliente);
+        void AddCLient(Client cliente);
 
         Task<IEnumerable<Client>> GetAll();
         Task<Client> GetByCpf(string cpf);

@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "OA+UPtJLyF7UlYXN/KdT0UPbcEuyUuMJnJ4Xqj1It96IF1xh/6wvkccHaF2WF37F+U4BVxMCficmNUlgKo3njA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity\\PS.Catalog.API\\PS.Catalog.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\maiara.santos\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
+    "C:\\Users\\maiara.santos\\.nuget\\packages\\fluentvalidation\\11.1.0\\fluentvalidation.11.1.0.nupkg.sha512",
+    "C:\\Users\\maiara.santos\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\maiara.santos\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\maiara.santos\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\maiara.santos\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\maiara.santos\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
