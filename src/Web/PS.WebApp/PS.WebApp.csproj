@@ -10,16 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <_WebToolingArtifacts Remove="Properties\serviceDependencies.json" />
-    <_WebToolingArtifacts Remove="Properties\serviceDependencies.local.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Properties\serviceDependencies.json" />
-    <Content Include="Properties\serviceDependencies.local.json" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="Views\Shared\Components\Paginacao\Default.cshtml" />
   </ItemGroup>
 
@@ -34,6 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Building Blocks\PS.Core\PS.Core.csproj" />
     <ProjectReference Include="..\..\Building Blocks\PS.WebApi.Core\PS.WebApi.Core.csproj" />
+    <ProjectReference Include="..\..\Services\PS.Catalog.API\PS.Catalog.API.csproj" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>

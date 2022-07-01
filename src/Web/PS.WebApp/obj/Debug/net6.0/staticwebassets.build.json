@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "yxUMQgjkSvbGV5CU1jo3xcXYjkZi4b+11Nn28cLdt24=",
+  "Hash": "JWOxUFtKZLAHbVyXYUEpljcGIqyNPnEHVtcTDBfMZlM=",
   "Source": "PS.WebApp",
   "BasePath": "_content/PS.WebApp",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Catalog.API\\PS.Catalog.API.csproj",
+      "Version": 2,
+      "Source": "PS.Catalog.API",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "PS.WebApp\\wwwroot",

@@ -1,7 +1,10 @@
-﻿using Polly;
+﻿using Microsoft.AspNetCore.Mvc.DataAnnotations;
+using Polly;
 using Polly.Extensions.Http;
 using Polly.Retry;
+using PS.WebApi.Core.Extensions;
 using PS.WebApi.Core.User;
+using PS.WebApp.Extensions;
 using PS.WebApp.Services;
 using PS.WebApp.Services.Handlers;
 
@@ -9,9 +12,9 @@ namespace PS.WebApp.Configurations
 {
     public static class DependencyInjectionConfig
     {
-        public static void RegisterServices(this IServiceCollection services)
+        public static void RegisterServices(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddHttpClient<IAuthenticationService, AuthenticationService>();
+            services.AddSingleton<IValidationAttributeAdapterProvider, CpfValidationAttributeAdapterProvider>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<IAspNetUser, AspNetUser>();
 
@@ -21,12 +24,21 @@ namespace PS.WebApp.Configurations
 
             services.AddHttpClient<IAuthenticationService, AuthenticationService>()
                 .AddPolicyHandler(PollyExtensions.WaitToTry())
+                .AllowSelfSignedCertificate()
+                .AddTransientHttpErrorPolicy(
+                    p => p.CircuitBreakerAsync(5, TimeSpan.FromSeconds(30)));
+
+            services.AddHttpClient<ICatalogService, CatalogService>()
+                .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
+                .AddPolicyHandler(PollyExtensions.WaitToTry())
+                .AllowSelfSignedCertificate()
                 .AddTransientHttpErrorPolicy(
                     p => p.CircuitBreakerAsync(5, TimeSpan.FromSeconds(30)));
 
             services.AddHttpClient<IClientService, ClientService>()
                 .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
                 .AddPolicyHandler(PollyExtensions.WaitToTry())
+                .AllowSelfSignedCertificate()
                 .AddTransientHttpErrorPolicy(
                     p => p.CircuitBreakerAsync(5, TimeSpan.FromSeconds(30)));
 

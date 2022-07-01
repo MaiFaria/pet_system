@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fYM6OYYQMdD9x182sOaZW6A7Qk/q4vMPHNn9EXA0yRVApVgzuF4HbT5eIX6WE6m4nAdHEnN4jCHArAGr9kGLCQ==",
+  "dgSpecHash": "mwdrQ3hZWD6qDbG0Omj22sL3GSECke/e0Wndfw4L4ZTKSsqqgAc5215HUvgFpssh5mKaoHqBcQ7bRgwrLNMc2w==",
   "success": true,
   "projectFilePath": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity.API\\PS.Identity.API.csproj",
   "expectedPackageFiles": [
@@ -65,6 +65,7 @@
     "C:\\Users\\maiara.santos\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\maiara.santos\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\maiara.santos\\.nuget\\packages\\polly\\7.2.3\\polly.7.2.3.nupkg.sha512",
+    "C:\\Users\\maiara.santos\\.nuget\\packages\\polly.extensions.http\\3.0.0\\polly.extensions.http.3.0.0.nupkg.sha512",
     "C:\\Users\\maiara.santos\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
     "C:\\Users\\maiara.santos\\.nuget\\packages\\swashbuckle.aspnetcore\\6.3.1\\swashbuckle.aspnetcore.6.3.1.nupkg.sha512",
     "C:\\Users\\maiara.santos\\.nuget\\packages\\swashbuckle.aspnetcore.newtonsoft\\6.3.1\\swashbuckle.aspnetcore.newtonsoft.6.3.1.nupkg.sha512",

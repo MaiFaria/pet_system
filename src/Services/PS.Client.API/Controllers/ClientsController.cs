@@ -21,7 +21,7 @@ namespace PS.Client.API.Controllers
         }
 
         [HttpGet("cliente/endereco")]
-        public async Task<IActionResult> ObterEndereco()
+        public async Task<IActionResult> GetAddress()
         {
             var endereco = await _clientRepository.GetAddressById(_user.GetUserId());
 
@@ -29,7 +29,7 @@ namespace PS.Client.API.Controllers
         }
 
         [HttpPost("cliente/endereco")]
-        public async Task<IActionResult> AdicionarEndereco(AddAddressCommand adress)
+        public async Task<IActionResult> AddAddress(AddAddressCommand adress)
         {
             adress.ClientId = _user.GetUserId();
             return CustomResponse(await _mediator.SendCommand(adress));

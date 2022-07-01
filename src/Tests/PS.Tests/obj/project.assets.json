@@ -17,6 +17,15 @@
           "build/netstandard1.0/coverlet.collector.targets": {}
         }
       },
+      "Dapper/2.0.123": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Dapper.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Dapper.dll": {}
+        }
+      },
       "EasyNetQ/6.5.2": {
         "type": "package",
         "dependencies": {
@@ -1188,6 +1197,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/Polly.dll": {}
+        }
+      },
+      "Polly.Extensions.Http/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Polly": "7.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Polly.Extensions.Http.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Polly.Extensions.Http.dll": {}
         }
       },
       "RabbitMQ.Client/6.2.1": {
@@ -2698,8 +2719,16 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Dapper": "2.0.123",
           "FluentValidation": "11.1.0",
-          "PS.Core": "1.0.0"
+          "Microsoft.EntityFrameworkCore": "6.0.6",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.6",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.6",
+          "PS.MessageBus": "1.0.0",
+          "PS.WebApi.Core": "1.0.0",
+          "Swashbuckle.AspNetCore.Swagger": "6.3.1",
+          "Swashbuckle.AspNetCore.SwaggerGen": "6.3.1",
+          "Swashbuckle.AspNetCore.SwaggerUI": "6.3.1"
         },
         "compile": {
           "bin/placeholder/PS.Catalog.API.dll": {}
@@ -2806,7 +2835,9 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0",
           "NetDevPack.Security.JwtExtensions": "6.0.2",
-          "PS.Core": "1.0.0"
+          "PS.Core": "1.0.0",
+          "Polly": "7.2.3",
+          "Polly.Extensions.Http": "3.0.0"
         },
         "compile": {
           "bin/placeholder/PS.WebApi.Core.dll": {}
@@ -2886,6 +2917,24 @@
         "coverlet-icon.png",
         "coverlet.collector.3.1.2.nupkg.sha512",
         "coverlet.collector.nuspec"
+      ]
+    },
+    "Dapper/2.0.123": {
+      "sha512": "RDFF4rBLLmbpi6pwkY7q/M6UXHRJEOerplDGE5jwEkP/JGJnBauAClYavNKJPW1yOTWRPIyfj4is3EaJxQXILQ==",
+      "type": "package",
+      "path": "dapper/2.0.123",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Dapper.png",
+        "dapper.2.0.123.nupkg.sha512",
+        "dapper.nuspec",
+        "lib/net461/Dapper.dll",
+        "lib/net461/Dapper.xml",
+        "lib/net5.0/Dapper.dll",
+        "lib/net5.0/Dapper.xml",
+        "lib/netstandard2.0/Dapper.dll",
+        "lib/netstandard2.0/Dapper.xml"
       ]
     },
     "EasyNetQ/6.5.2": {
@@ -4991,6 +5040,21 @@
         "lib/netstandard2.0/Polly.xml",
         "polly.7.2.3.nupkg.sha512",
         "polly.nuspec"
+      ]
+    },
+    "Polly.Extensions.Http/3.0.0": {
+      "sha512": "drrG+hB3pYFY7w1c3BD+lSGYvH2oIclH8GRSehgfyP5kjnFnHKQuuBhuHLv+PWyFuaTDyk/vfRpnxOzd11+J8g==",
+      "type": "package",
+      "path": "polly.extensions.http/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.1/Polly.Extensions.Http.dll",
+        "lib/netstandard1.1/Polly.Extensions.Http.xml",
+        "lib/netstandard2.0/Polly.Extensions.Http.dll",
+        "lib/netstandard2.0/Polly.Extensions.Http.xml",
+        "polly.extensions.http.3.0.0.nupkg.sha512",
+        "polly.extensions.http.nuspec"
       ]
     },
     "RabbitMQ.Client/6.2.1": {
@@ -9037,8 +9101,8 @@
     },
     "PS.Catalog.API/1.0.0": {
       "type": "project",
-      "path": "../../Services/PS.Identity/PS.Catalog.API/PS.Catalog.API.csproj",
-      "msbuildProject": "../../Services/PS.Identity/PS.Catalog.API/PS.Catalog.API.csproj"
+      "path": "../../Services/PS.Catalog.API/PS.Catalog.API.csproj",
+      "msbuildProject": "../../Services/PS.Catalog.API/PS.Catalog.API.csproj"
     },
     "PS.Client.API/1.0.0": {
       "type": "project",
@@ -9114,14 +9178,14 @@
             "C:\\Users\\maiara.santos\\pet_system\\src\\Building Blocks\\PS.Core\\PS.Core.csproj": {
               "projectPath": "C:\\Users\\maiara.santos\\pet_system\\src\\Building Blocks\\PS.Core\\PS.Core.csproj"
             },
+            "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Catalog.API\\PS.Catalog.API.csproj": {
+              "projectPath": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Catalog.API\\PS.Catalog.API.csproj"
+            },
             "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Client.API\\PS.Client.API.csproj": {
               "projectPath": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Client.API\\PS.Client.API.csproj"
             },
             "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity.API\\PS.Identity.API.csproj": {
               "projectPath": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity.API\\PS.Identity.API.csproj"
-            },
-            "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity\\PS.Catalog.API\\PS.Catalog.API.csproj": {
-              "projectPath": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Identity\\PS.Catalog.API\\PS.Catalog.API.csproj"
             }
           }
         }

@@ -129,6 +129,7 @@ C:\Users\maiara.santos\pet_system\src\Services\PS.Identity.API\bin\Debug\net6.0\
 C:\Users\maiara.santos\pet_system\src\Services\PS.Identity.API\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\maiara.santos\pet_system\src\Services\PS.Identity.API\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
 C:\Users\maiara.santos\pet_system\src\Services\PS.Identity.API\bin\Debug\net6.0\Polly.dll
+C:\Users\maiara.santos\pet_system\src\Services\PS.Identity.API\bin\Debug\net6.0\Polly.Extensions.Http.dll
 C:\Users\maiara.santos\pet_system\src\Services\PS.Identity.API\bin\Debug\net6.0\RabbitMQ.Client.dll
 C:\Users\maiara.santos\pet_system\src\Services\PS.Identity.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Newtonsoft.dll
 C:\Users\maiara.santos\pet_system\src\Services\PS.Identity.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll

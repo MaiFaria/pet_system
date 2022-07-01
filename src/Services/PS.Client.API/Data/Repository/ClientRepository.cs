@@ -25,7 +25,7 @@ namespace PS.Client.API.Data.Repository
             return _context.Clients.FirstOrDefaultAsync(c => c.Cpf.Number == cpf);
         }
 
-        public void Add(Models.Client client)
+        public void AddCLient(Models.Client client)
         {
             _context.Clients.Add(client);
         }
