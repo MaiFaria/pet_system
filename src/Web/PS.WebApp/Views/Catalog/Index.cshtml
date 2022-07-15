@@ -1,5 +1,5 @@
 ﻿@using PS.WebApp.Extensions
-@model PagedViewModel<ProductViewModel>
+@model IEnumerable<PS.WebApp.Models.ProductViewModel>
 
 @{
     ViewData["Title"] = "Todos os produtos";
@@ -15,7 +15,7 @@
         <div class="container" style="padding-top: 20px">
             <div class="row">
                 @{
-                    foreach (var produto in Model.List.Where(p => p.Active).OrderBy(p => p.Name))
+                    foreach (var produto in Model.Where(p => p.Active).OrderBy(p => p.Name))
                     {
                         <div class="col-md-3">
                             <div href="#" class="card card-product-grid">
@@ -40,9 +40,6 @@
                     }
                 }
             </div>
-            
-            <vc:paginacao modelo-paginado="@Model"></vc:paginacao>
-
         </div>
     </div>
 </section>

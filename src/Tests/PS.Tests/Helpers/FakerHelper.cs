@@ -1,4 +1,5 @@
 ﻿using Bogus;
+using PS.Cart.Models;
 using PS.Client.API.Models;
 using PS.Core.DomainObjects;
 using PS.Tests.Utils;

@@ -35,6 +35,12 @@ namespace PS.WebApp.Configurations
                 .AddTransientHttpErrorPolicy(
                     p => p.CircuitBreakerAsync(5, TimeSpan.FromSeconds(30)));
 
+            services.AddHttpClient<IComprasBffService, ComprasBffService>()
+                .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
+                .AddPolicyHandler(PollyExtensions.WaitToTry())
+                .AddTransientHttpErrorPolicy(
+                    p => p.CircuitBreakerAsync(5, TimeSpan.FromSeconds(30)));
+
             services.AddHttpClient<IClientService, ClientService>()
                 .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
                 .AddPolicyHandler(PollyExtensions.WaitToTry())

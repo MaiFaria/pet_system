@@ -12,8 +12,8 @@ namespace PS.Catalog.API.Configuration
 
                 c.SwaggerDoc("v1", new OpenApiInfo()
                 {
-                    Title = "Pet System Identity API =)",
-                    Description = "API de Identidade da aplicação Pet System.",
+                    Title = "Pet System Catalog API =)",
+                    Description = "API de Catálogo da aplicação Pet System.",
                     Contact = new OpenApiContact() { Name = "Maiara Faria", Email = "mf.mai@hotmail.com" },
                     License = new OpenApiLicense() { Name = "MIT", Url = new Uri("https://opensource.org/licenses/MIT") }
                 });

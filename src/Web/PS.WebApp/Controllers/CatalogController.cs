@@ -17,9 +17,7 @@ namespace PS.WebApp.Controllers
         [Route("vitrine")]
         public async Task<IActionResult> Index([FromQuery] int ps = 8, [FromQuery] int page = 1, [FromQuery] string q = null)
         {
-            var produtos = await _catalogoService.GetAll(ps, page, q);
-            ViewBag.Pesquisa = q;
-            produtos.ReferenceAction = "Index";
+            var produtos = await _catalogoService.GetAll();
 
             return View(produtos);
         }
