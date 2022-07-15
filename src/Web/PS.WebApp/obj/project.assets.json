@@ -1167,6 +1167,7 @@
           "Microsoft.EntityFrameworkCore": "6.0.6",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.6",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.15.1",
           "PS.MessageBus": "1.0.0",
           "PS.WebApi.Core": "1.0.0",
           "Swashbuckle.AspNetCore.Swagger": "6.3.1",

@@ -185,3 +185,8 @@ C:\Users\maiara.santos\pet_system\src\Tests\PS.Tests\obj\Debug\net6.0\refint\PS.
 C:\Users\maiara.santos\pet_system\src\Tests\PS.Tests\obj\Debug\net6.0\PS.Tests.pdb
 C:\Users\maiara.santos\pet_system\src\Tests\PS.Tests\obj\Debug\net6.0\PS.Tests.genruntimeconfig.cache
 C:\Users\maiara.santos\pet_system\src\Tests\PS.Tests\obj\Debug\net6.0\ref\PS.Tests.dll
+C:\Users\maiara.santos\pet_system\src\Tests\PS.Tests\bin\Debug\net6.0\PS.Cart.deps.json
+C:\Users\maiara.santos\pet_system\src\Tests\PS.Tests\bin\Debug\net6.0\PS.Cart.runtimeconfig.json
+C:\Users\maiara.santos\pet_system\src\Tests\PS.Tests\bin\Debug\net6.0\PS.Cart.exe
+C:\Users\maiara.santos\pet_system\src\Tests\PS.Tests\bin\Debug\net6.0\PS.Cart.dll
+C:\Users\maiara.santos\pet_system\src\Tests\PS.Tests\bin\Debug\net6.0\PS.Cart.pdb

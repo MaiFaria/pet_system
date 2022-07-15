@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9jDV18g4Gq7Vv5nd/yY8MwK8OVus0iB1Iw+TCK15ohtqmobNqR2RJTmnAYGzRHfLuKpcfRoXgIMoJedB+SE1xw==",
+  "dgSpecHash": "PWoF8VMUtQyzBbSHDcWQdfvM5jq2xhMlDyaPhPIpkUjLK7d/T7eRhRB/JQFgzGYZC8vxU882bDwDouGRP4GiGQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\maiara.santos\\pet_system\\src\\Services\\PS.Catalog.API\\PS.Catalog.API.csproj",
   "expectedPackageFiles": [
@@ -41,6 +41,7 @@
     "C:\\Users\\maiara.santos\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.17.0\\microsoft.identitymodel.tokens.6.17.0.nupkg.sha512",
     "C:\\Users\\maiara.santos\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\maiara.santos\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\maiara.santos\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.15.1\\microsoft.visualstudio.azure.containers.tools.targets.1.15.1.nupkg.sha512",
     "C:\\Users\\maiara.santos\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\maiara.santos\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\maiara.santos\\.nuget\\packages\\netdevpack.security.jwtextensions\\6.0.2\\netdevpack.security.jwtextensions.6.0.2.nupkg.sha512",

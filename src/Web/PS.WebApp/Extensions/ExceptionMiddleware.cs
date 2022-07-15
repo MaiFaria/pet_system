@@ -61,16 +61,6 @@ namespace PS.WebApp.Extensions
         {
             if (statusCode == HttpStatusCode.Unauthorized)
             {
-                if (_authenticationService.ExpiredToken())
-                {
-                    if (_authenticationService.RefreshValidToken().Result)
-                    {
-                        context.Response.Redirect(context.Request.Path);
-                        return;
-                    }
-                }
-
-                _authenticationService.Logout();
                 context.Response.Redirect($"/login?ReturnUrl={context.Request.Path}");
                 return;
             }

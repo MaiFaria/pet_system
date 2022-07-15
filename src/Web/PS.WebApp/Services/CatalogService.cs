@@ -6,7 +6,7 @@ namespace PS.WebApp.Services
 {
     public interface ICatalogService
     {
-        Task<PagedViewModel<ProductViewModel>> GetAll(int pageSize, int pageIndex, string query = null);
+        Task<IEnumerable<ProductViewModel>> GetAll();
         Task<ProductViewModel> GetById(Guid id);
     }
     public class CatalogService : Service, ICatalogService
@@ -30,13 +30,13 @@ namespace PS.WebApp.Services
             return await DeserializeObjectResponse<ProductViewModel>(response);
         }
 
-        public async Task<PagedViewModel<ProductViewModel>> GetAll(int pageSize, int pageIndex, string query = null)
+        public async Task<IEnumerable<ProductViewModel>> GetAll()
         {
-            var response = await _httpClient.GetAsync($"/catalogo/produtos?ps={pageSize}&page={pageIndex}&q={query}");
+            var response = await _httpClient.GetAsync($"/catalogo/produtos/");
 
             HandleErrorResponse(response);
 
-            return await DeserializeObjectResponse<PagedViewModel<ProductViewModel>>(response);
+            return await DeserializeObjectResponse<IEnumerable<ProductViewModel>>(response);
         }
     }
 }

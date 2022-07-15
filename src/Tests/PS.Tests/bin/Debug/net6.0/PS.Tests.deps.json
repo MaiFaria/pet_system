@@ -10,6 +10,7 @@
         "dependencies": {
           "Bogus": "34.0.2",
           "Microsoft.NET.Test.Sdk": "17.1.0",
+          "PS.Cart": "1.0.0",
           "PS.Catalog.API": "1.0.0",
           "PS.Client.API": "1.0.0",
           "PS.Core": "1.0.0",
@@ -1799,6 +1800,15 @@
         }
       },
       "xunit.runner.visualstudio/2.4.3": {},
+      "PS.Cart/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "11.1.0",
+          "PS.Core": "1.0.0"
+        },
+        "runtime": {
+          "PS.Cart.dll": {}
+        }
+      },
       "PS.Catalog.API/1.0.0": {
         "dependencies": {
           "Dapper": "2.0.123",
@@ -3109,6 +3119,11 @@
       "sha512": "sha512-kZZSmOmKA8OBlAJaquPXnJJLM9RwQ27H7BMVqfMLUcTi9xHinWGJiWksa3D4NEtz0wZ/nxd2mogObvBgJKCRhQ==",
       "path": "xunit.runner.visualstudio/2.4.3",
       "hashPath": "xunit.runner.visualstudio.2.4.3.nupkg.sha512"
+    },
+    "PS.Cart/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "PS.Catalog.API/1.0.0": {
       "type": "project",
